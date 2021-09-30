@@ -3,7 +3,7 @@
         <div class="container-grid small-container">
             <nav class="box column-12">
                 <div class="logo">
-                    <img src="@/assets/media/dc-logo.png" alt="Logo DC">
+                    <img src="../assets/media/dc-logo.png" alt="Logo DC">
                 </div>
                 <ul>
                     <li><a href="#">CHARACTERS</a></li>
