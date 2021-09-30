@@ -1,0 +1,39 @@
+@import "./variables";
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+// Reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.5rem;
+}
+
+.box {
+    display: flex;
+}
+
+.column-12 {
+    grid-column: 1/-1;
+}
+
+li {
+    list-style: none;
+}
+
+// Containers
+.small-container {
+    width: $sizeContainer;
+    margin: 0 auto;
+    max-width: 80rem;
+}
