@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import MainTop from "@/components/MainTop.vue";
-import MainBottom from "@/components/MainBottom.vue";
-import Footer from "@/components/Footer.vue";
+import Header from "./components/Header.vue";
+import MainTop from "./components/MainTop.vue";
+import MainBottom from "./components/MainBottom.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: 'App',
@@ -29,5 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@/assets/style/common"
+  @import "./assets/style/common"
 </style>
