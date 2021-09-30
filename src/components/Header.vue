@@ -6,16 +6,9 @@
                     <img src="../assets/media/dc-logo.png" alt="Logo DC">
                 </div>
                 <ul>
-                    <li><a href="#">CHARACTERS</a></li>
-                    <li><a href="#">COMICS</a></li>
-                    <li><a href="#">MOVIES</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">GAMES</a></li>
-                    <li><a href="#">COLLECTIBLES</a></li>
-                    <li><a href="#">VIDEOS</a></li>
-                    <li><a href="#">FANS</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">SHOP</a></li>
+                    <li v-for="(elm, index) in nav" :key="index">
+                        <a :href="elm.link"></a>{{elm.name}}
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -24,8 +17,66 @@
 
 <script>
     export default {
-        name: "Header"
+        name: "Header",
+
+        data() {
+        return {
+            nav: {
+                characters: {
+                    name: 'CHARACTERS',
+                    link: '#',
+                    // active: false
+                },
+                comics: {
+                    name: 'COMICS',
+                    link: '#',
+                    // active: true
+                },
+                movies: {
+                    name: 'MOVIES',
+                    link: '#',
+                    // active: false
+                },
+                tv: {
+                    name: 'TV',
+                    link: '#',
+                    // active: false
+                },
+                games: {
+                    name: 'GAMES',
+                    link: '#',
+                    // active: false
+                },
+                collectibles: {
+                    name: 'COLLECTIBLES',
+                    link: '#',
+                    // active: false
+                },
+                videos: {
+                    name: 'VIDEOS',
+                    link: '#',
+                    // active: false
+                },
+                fans: {
+                    name: 'FANS',
+                    link: '#',
+                    // active: false
+                },
+                news: {
+                    name: 'NEWS',
+                    link: '#',
+                    // active: false
+                },
+                shop: {
+                    name: 'SHOP',
+                    link: '#',
+                    // active: false
+                }
+            }
+        }
+        
     }
+}
 </script>
 
 <style lang="scss" scoped>

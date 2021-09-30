@@ -3,11 +3,9 @@
         <div class="container-grid small-container">
             <div class="main-bottom column-12">
                 <ul>
-                    <li><a href="#"><img src="../assets/media/buy-comics-digital-comics.png" alt="Icona Digital Comics"></a><span>DIGITAL COMICS</span></li>
-                    <li><a href="#"><img src="../assets/media/buy-comics-merchandise.png" alt="Icona Merchandise"></a></li>
-                    <li><a href="#"><img src="../assets/media/buy-comics-subscriptions.png" alt="Icona Sottoscrizione"></a></li>
-                    <li><a href="#"><img src="../assets/media/buy-comics-shop-locator.png" alt="Icona Shop Locator"></a></li>
-                    <li><a href="#"><img src="../assets/media/buy-dc-power-visa.svg" alt="Icona Visa"></a></li>
+                    <li v-for="(object, index) in objects" :key="index">
+                        <a :href="object.link"><img :src="'../media/' + object.src" :alt="object.alt"></a><span>{{object.name}}</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -16,8 +14,45 @@
 
 <script>
     export default {
-        name: "MainBottom"
+        name: "MainBottom",
+
+        data() {
+        return {
+            objects: {
+                digitalComics: {
+                    name: 'DIGITAL COMICS',
+                    src: 'buy-comics-digital-comics.png',
+                    link: '#',
+                    alt: 'Icona Digital Comics'
+                },
+                merchandise: {
+                    name: 'DC MERCHANDISE',
+                    src: 'buy-comics-merchandise.png',
+                    link: '#',
+                    alt: 'Icona DC Merchandise'
+                },
+                subscription: {
+                    name: 'SUBSCRIPTION',
+                    src: 'buy-comics-subscriptions.png',
+                    link: '#',
+                    alt: 'Icona Sottoscrizione'
+                },
+                shopLocator: {
+                    name: 'COMIC SHOP LOCATOR',
+                    src: 'buy-comics-shop-locator.png',
+                    link: '#',
+                    alt: 'Icona Comic Shop'
+                },
+                cardVisa: {
+                    name: 'DC POWER VISA',
+                    src: 'buy-dc-power-visa.svg',
+                    link: '#',
+                    alt: 'Icona Visa'
+                },
+            }
+        }
     }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -5,43 +5,30 @@
                 <div class="column-12 footer-top">
                     <div>
                         <ul>
-                            <li><h2>DC COMICS</h2> </li>
-                            <li><a href="#">Characters</a></li>
-                            <li><a href="#">Comics</a></li>
-                            <li><a href="#">Movies</a></li>
-                            <li><a href="#">TV</a></li>
-                            <li><a href="#">Games</a></li>
-                            <li><a href="#">Videos</a></li>
-                            <li><a href="#">News</a></li>
+                            <li><h2>DC COMICS</h2></li>
+                            <li v-for="(link, index) in footerLinks.dcComics" :key="index">
+                                <a :href="link.link">{{link.name}}</a>
+                            </li>
                             <li><h2>SHOP</h2></li>
-                            <li><a href="#">Shop DC</a></li>
-                            <li><a href="#">Shop DC Collectibles</a></li>
+                            <li v-for="(link, index) in footerLinks.shop" :key="index">
+                                <a :href="link.link">{{link.name}}</a>
+                            </li>
                         </ul>
                     </div>
                     <div>
                         <ul>
                             <li><h2>DC</h2></li>
-                            <li><a href="#">Terms Of Use</a></li>
-                            <li><a href="#">Privacy policy (New)</a></li>
-                            <li><a href="#">Ad Choices</a></li>
-                            <li><a href="#">Advertising</a></li>
-                            <li><a href="#">Jobs</a></li>
-                            <li><a href="#">Subscriptions</a></li>
-                            <li><a href="#">Talent Workshops</a></li>
-                            <li><a href="#">CPSC Certificates</a></li>
-                            <li><a href="#">Ratings</a></li>
-                            <li><a href="#">Shop Help</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li v-for="(link, index) in footerLinks.dc" :key="index">
+                                <a :href="link.link">{{link.name}}</a>
+                            </li>
                         </ul>
                     </div>
                     <div>
                         <ul>
                             <li><h2>SITES</h2></li>
-                            <li><a href="#">DC</a></li>
-                            <li><a href="#">MAD Magazine</a></li>
-                            <li><a href="#">DC Kids</a></li>
-                            <li><a href="#">DC Universe</a></li>
-                            <li><a href="#">DC Power Visa</a></li>
+                            <li v-for="(link, index) in footerLinks.sites" :key="index">
+                                <a :href="link.link">{{link.name}}</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -56,11 +43,11 @@
                     </div>
                     <div class="social">
                         <h2>FOLLOW US</h2>
-                        <a href="#"><img src="../assets/media/footer-facebook.png" alt="Icona Facebook"></a>
-                        <a href="#"><img src="../assets/media/footer-twitter.png" alt="Icona Twitter"></a>
-                        <a href="#"><img src="../assets/media/footer-youtube.png" alt="Icona YouTube"></a>
-                        <a href="#"><img src="../assets/media/footer-pinterest.png" alt="Icona Pinterest"></a>
-                        <a href="#"><img src="../assets/media/footer-periscope.png" alt="Icona Localizzazione"></a>
+                        <ul>
+                            <li v-for="(link, index) in footerLinks.socials" :key="index">
+                                <a :href="link.link"><img :src="'../media/' + link.src" :alt="link.alt"></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -71,8 +58,150 @@
 
 <script>
     export default {
-        name: "Footer"
+        name: "Footer",
+
+        data() {
+        return {
+            footerLinks: {
+                dcComics: [
+                    {
+                        name: 'Characters',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Comics',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Movies',
+                        link: '#' 
+                    },
+                    {
+                        name: 'TV',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Games',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Videos',
+                        link: '#' 
+                    },
+                    {
+                        name: 'News',
+                        link: '#' 
+                    }
+                ],
+                shop: [
+                    {
+                        name: 'Shop DC',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Shop DC Collectibles',
+                        link: '#' 
+                    }
+                ],
+                dc: [
+                    {
+                        name: 'Terms Of Use',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Privacy policy (New)',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Ad Choices',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Advertising',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Jobs',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Subscriptions',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Talent Workshops',
+                        link: '#' 
+                    },
+                    {
+                        name: 'CPSC Certificates',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Ratings',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Shop Help',
+                        link: '#' 
+                    },
+                    {
+                        name: 'Contact Us',
+                        link: '#' 
+                    },
+                ],
+                sites: [
+                    {
+                        name: 'DC',
+                        link: '#' 
+                    },
+                    {
+                        name: 'MAD Magazine',
+                        link: '#' 
+                    },
+                    {
+                        name: 'DC Kids',
+                        link: '#' 
+                    },
+                    {
+                        name: 'DC Universe',
+                        link: '#' 
+                    },
+                    {
+                        name: 'DC Power Visa',
+                        link: '#' 
+                    },
+                ],
+                socials: [
+                    {
+                        src: 'footer-facebook.png',
+                        link: '#',
+                        alt: 'Icona FaceBook'
+                    },
+                    {
+                        src: 'footer-twitter.png',
+                        link: '#',
+                        alt: 'Icona Twitter'
+                    },
+                    {
+                        src: 'footer-youtube.png',
+                        link: '#',
+                        alt: 'Icona YouTube'
+                    },
+                    {
+                        src: 'footer-pinterest.png',
+                        link: '#',
+                        alt: 'Icona Pinterest'
+                    },
+                    {
+                        src: 'footer-periscope.png',
+                        link: '#',
+                        alt: 'Icona Locazione Shop'
+                    }
+                ]
+            }
+        }
     }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -82,7 +211,6 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 1.5rem;
-        max-width: 100rem;
     }
     .bgd-footer-top {
         background-image: url("../assets/media/footer-bg.jpg");
@@ -170,9 +298,12 @@
             margin-right: .9375rem;
         }
 
-        a {
-            margin-left: .9375rem;
+        ul {
+            display: flex;
+
+            a {
+                margin-left: .9375rem;
+            }
         }
     }
-
 </style>
