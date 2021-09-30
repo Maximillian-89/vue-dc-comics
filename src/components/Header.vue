@@ -107,6 +107,7 @@
         font-weight: 600;
         text-align: center;
         border-bottom: .3125rem solid transparent;
+        cursor: pointer;
 
         &:hover {
             border-bottom: .3125rem solid $mainColor;
