@@ -4,7 +4,7 @@
             <div class="container-grid-footer small-container bgd-dc">
                 <div class="column-12 footer-top">
                     <div>
-                        <ul>
+                        <ul class="first-ul">
                             <li><h2>DC COMICS</h2></li>
                             <li v-for="(link, index) in footerLinks.dcComics" :key="index">
                                 <a :href="link.link">{{link.name}}</a>
@@ -234,7 +234,7 @@
         margin-right: 3.75rem;
     }
     
-    .footer-top > div > ul:first-child {
+    .first-ul {
         li:nth-child(9) {
             margin-top: 16px;
         }
