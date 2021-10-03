@@ -8,7 +8,7 @@
 <script>
     export default {
         name: "SingleCard",
-        props: ['card'],
+        props: ['card'], //**? Diamo un nome al props, che farà da elemento.
     }
 </script>
 

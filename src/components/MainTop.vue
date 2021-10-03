@@ -4,7 +4,7 @@
             <div class="box column-12">
                 <div class="main-top">
                     <h2 class="more">CURRENT SERIES</h2>
-                    <SingleCard v-for="(comic, index) in cards" :key="index" :card="comic"/>
+                    <SingleCard v-for="(comic, index) in cards" :key="index" :card="comic"/> //**? inseriamo il componente in cui faremo direttamente il "v-for".
                     <button>LOAD MORE</button>
                 </div>
             </div>
@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import SingleCard from "../components/SingleCard.vue";
-import albums from "../other/dc-comics.json"; //Ho creato una variabile "albums" dandogli come dati della variabili il file .json.
+import SingleCard from "../components/SingleCard.vue"; //**? Importiamo il figlio a cui abbiamo dato gli elementi con il props.
+import albums from "../other/dc-comics.json"; //**? Ho creato una variabile "albums" dandogli come dati della variabili il file .json.
 
     export default {
         name: "MainTop",
