@@ -3,7 +3,9 @@
         <div class="container-grid small-container">
             <div class="box column-12">
                 <div class="main-top">
+                    <h2 class="more">CURRENT SERIES</h2>
                     <SingleCard v-for="(comic, index) in cards" :key="index" :card="comic"/>
+                    <button>LOAD MORE</button>
                 </div>
             </div>
         </div>
@@ -103,6 +105,8 @@ import albums from "../other/dc-comics.json"; //Ho creato una variabile "albums"
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/variables";
+
     .bgd-main-top {
         background-color: #1c1c1c;
         flex-wrap: wrap;
@@ -111,5 +115,30 @@ import albums from "../other/dc-comics.json"; //Ho creato una variabile "albums"
 
     .main-top {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1.875rem;
+        margin-top: 3rem;
+        position: relative;
+
+        .more {
+            position: absolute;
+            background-color: $mainColor;
+            color: #fff;
+            left: 0;
+            top: -4.625rem;
+            padding: 10px 15px;
+        }
+
+        button {
+            background-color: $mainColor;
+            color: #FEFEFE;
+            display: block;
+            font-size: 1.125rem;
+            line-height: 2.5rem;
+            width: 9.375rem;
+            border: none;
+            cursor: pointer;
+        }
     }
 </style>
