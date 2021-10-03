@@ -17,7 +17,7 @@ import Header from "./components/Header.vue";
 import MainTop from "./components/MainTop.vue";
 import MainBottom from "./components/MainBottom.vue";
 import Footer from "./components/Footer.vue";
-import Jumbo from "./components/Jumbo.vue"
+import Jumbo from "./components/Jumbo.vue";
 
 export default {
   name: 'App',
